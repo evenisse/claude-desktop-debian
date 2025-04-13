@@ -274,7 +274,7 @@ OUTPUT_PATH="$WORK_DIR/$OUTPUT_FILENAME"
 # Export ARCH instead of using env
 export ARCH="$ARCHITECTURE"
 echo "Using ARCH=$ARCH" # Debug output
-if "$APPIMAGETOOL_PATH" "$APPDIR_PATH" "$OUTPUT_PATH"; then
+if "$APPIMAGETOOL_PATH" --appimage-extract-and-run "$APPDIR_PATH" "$OUTPUT_PATH"; then
     echo "✓ AppImage built successfully: $OUTPUT_PATH"
 else
     echo "❌ Failed to build AppImage using $APPIMAGETOOL_PATH"
